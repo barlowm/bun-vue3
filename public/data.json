@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started",
+    "content": "<p>Welcome to My PHP application!</p><p>This application demonstrates a modern web interface built with <b>Vue 3</b> and <b>Bun</b>.</p><p>Features include:</p><ul><li>Fixed header with search functionality</li><li>Adjustable sidebar navigation</li><li>Scrollable content with HTML support</li></ul>"
+  },
+  {
+    "id": 2,
+    "title": "Features & Capabilities",
+    "content": "<h3>Core Features</h3><p>The application includes several <b>powerful features</b>:<ul><li><strong>Real-time Search: </strong> Filter content instantly as you type</li><li><strong>Responsive Design: </strong> Works seamlessly on desktop and tablet</li> <li><strong>HTML Support: </strong> Display rich formatted content with HTML markup</li> <li><strong>Smooth Navigation: </strong> Navigate between sections with smooth scrolling</li> <li><strong>Adjustable Sidebar:</strong> Resize the navigation panel to your preference</li></ul></p>"
+  },
+  {
+    "id": 3,
+    "title": "Vue 3 Integration",
+    "content": "<p>This project leverages the power of <em>Vue 3</em> with its Composition API.</p><p><code>Vue 3</code> provides:</p><ul><li>Better performance and smaller bundle sizes</li><li>Improved type support for TypeScript</li><li>More flexible component composition patterns</li><li>Enhanced reactivity system</li></ul><blockquote>Vue 3 makes building interactive user interfaces simpler and more enjoyable.</blockquote>"
+  },
+  {
+    "id": 4,
+    "title": "Technical Architecture",
+    "content": "<p>The application architecture is built with modern web technologies:</p><pre><code>Frontend Stack:\n  - Vue 3 (Composition API)\n  - Vite (Build tool)\n  - CSS3 (Styling)\n  - JavaScript ES6+</code></pre><p>The sidebar width is <b>adjustable</b> by dragging the resize handle on the right edge.</p><p>Search functionality works across both section titles and content, providing instant filtering.</p>"
+  },
+  {
+    "id": 5,
+    "title": "Usage Instructions",
+    "content": "<p>Here are the key interactions:</p><ol><li><strong>Search:</strong> Type in the search field at the top to filter content</li><li><strong>Navigate:</strong> Click on any item in the sidebar to scroll to that section</li><li><strong>Resize:</strong> Drag the right edge of the sidebar to adjust its width</li><li><strong>Read:</strong> Enjoy rich HTML-formatted content in the main panel</li></ol><p>The content is loaded from an <code>external JSON file</code>, making it easy to update and maintain.</p>"
+  },
+  {
+    "id": 6,
+    "title": "Styling & Customization",
+    "content": "<p>The application features a <b>modern design</b> with:</p><ul><li>Gradient header with purple theme</li><li>Smooth transitions and hover effects</li><li>Custom scrollbar styling</li><li>Responsive typography</li><li>Accessible color contrast ratios</li></ul><p>All styles are <em>scoped to components</em>, preventing CSS conflicts.</p><p>You can customize colors, fonts, and spacing by modifying the component styles.</p>"
+  }
+]
