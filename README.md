@@ -1,6 +1,57 @@
 # Vue 3 + Bun Content Manager
 
-A modern web application built with Vue 3 and Bun featuring a fixed header panel, adjustable sidebar navigation, and dynamic content loading from external JSON.
+A quick and dirty application for my personal home page.
+
+I have worked with Vuejs for sometime and when reviewing some new technologies available for work, came across [BUN](https://bun.com/).
+
+It's a relatively new product (still in version 1.xx at this time), but looked interesting and can replace a JavaScript Runtime ([node.js](https://nodejs.org)), Package Manager ([NPM](https://www.npmjs.com/)), a Test Runner ([VITest](https://vitest.dev/)), and Bundler ([Vite](https://vite.dev/))
+
+So, I thought I'd try and and see if CoPilot could create a simple little web application using [BUN](https://bun.com/) and [Vue3.js](https://vuejs.org/).
+
+Honestly, it was fairly decent and quick. Some minor tweeks along the way and the application was up and running.
+
+
+
+## Initial script for CoPilot
+A modern web application built with Vue 3 and Bun featuring a fixed header panel, adjustable sidebar navigation, and dynamic content loading from external JSON file.
+Include support for rendering HTML in the content panel
+
+The `data.json` file uses this structure:
+```json
+[
+  {
+    "id": 1,
+    "title": "Section Title",
+    "content": "<p>HTML content goes here with <b>formatting</b></p>"
+  }
+]
+```
+Since support is provided for HTML tags, using paragraph tags `<p></p>` provides a simple way to have multiple lines in the content
+
+CoPilot generated all the code inside a GitHub Repo for me and provided simple installation and runtime scripts:
+To Install:
+```
+c\MyRepo> bun install
+```
+Developer mode runtime:
+```
+c\MyRepo> bun run dev
+```
+And Production:
+```
+c\MyRepo> bun run build
+```
+Preview production build locally
+```
+bun run preview
+```
+
+Which automatically opens a webpage: [http://localhost:4173/](http://localhost:4173/)
+
+So after testing I decided to try it as my new home page everytime I started my PC using [PM2](https://pm2.keymetrics.io/) Advanced Production Process Manager for Node.js
+
+_________________
+
 
 ## 🌟 Features
 
@@ -73,6 +124,9 @@ bun run build
 # Preview production build locally
 bun run preview
 ```
+
+
+
 
 ## 🎯 How to Use
 
@@ -241,11 +295,4 @@ bun run build
 ## 📄 License
 
 MIT License - Free to use for personal and commercial projects
-
-## 🤝 Contributing
-
-Feel free to fork, modify, and enhance this project based on your needs.
-
 ---
-
-**Happy coding!** 🚀
