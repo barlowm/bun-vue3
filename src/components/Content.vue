@@ -13,6 +13,11 @@
           class="content-section parent-section"
         >
           <h2 class="section-title">{{ section.title }}</h2>
+          <div
+            v-if="section.content"
+            class="section-content"
+            v-html="sanitizeHTML(section.content)"
+          ></div>
           <section
             v-for="sub in section.subsections"
             :key="sub.id"

@@ -34,6 +34,7 @@ const filteredSections = computed(() => {
     if (section.subsections && section.subsections.length) {
       return (
         section.title.toLowerCase().includes(query) ||
+        (section.content && section.content.toLowerCase().includes(query)) ||
         section.subsections.some(
           sub =>
             sub.title.toLowerCase().includes(query) ||

@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Getting Started",
+    "content": "<p>This section covers everything you need to get up and running with this application.</p>",
     "subsections": [
       {
         "id": "1.1",
