@@ -13,10 +13,14 @@
         >
           <!-- Section with subsections: show parent label + always-visible subsection list -->
           <template v-if="section.subsections && section.subsections.length">
-            <span class="nav-link nav-parent">
+            <a
+              :href="`#section-${section.id}`"
+              class="nav-link nav-parent"
+              @click.prevent="navigateToSection(section.id)"
+            >
               <span class="nav-bullet">▸</span>
               {{ section.title }}
-            </span>
+            </a>
             <ul class="nav-sublist">
               <li
                 v-for="sub in section.subsections"
@@ -166,7 +170,6 @@ const stopResize = () => {
 .nav-parent {
   font-weight: 600;
   color: #555;
-  cursor: default;
 }
 
 .nav-bullet {

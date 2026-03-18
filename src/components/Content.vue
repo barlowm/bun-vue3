@@ -13,10 +13,8 @@
           class="content-section parent-section"
         >
           <h2 class="section-title">{{ section.title }}</h2>
-          // Renders section content whether or not there are subsections
           <div
-            v-if="section.content && section.content.length"
-            :id="`section-${section.id}-content`"
+            v-if="section.content"
             class="section-content"
             v-html="sanitizeHTML(section.content)"
           ></div>
