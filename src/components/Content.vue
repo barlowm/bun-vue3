@@ -5,18 +5,41 @@
     </div>
 
     <div v-else class="content-wrapper">
-      <section
-        v-for="section in sections"
-        :key="section.id"
-        :id="`section-${section.id}`"
-        class="content-section"
-      >
-        <h2 class="section-title">{{ section.title }}</h2>
-        <div
-          class="section-content"
-          v-html="sanitizeHTML(section.content)"
-        ></div>
-      </section>
+      <template v-for="section in sections" :key="section.id">
+        <!-- Section with subsections -->
+        <section
+          v-if="section.subsections && section.subsections.length"
+          :id="`section-${section.id}`"
+          class="content-section parent-section"
+        >
+          <h2 class="section-title">{{ section.title }}</h2>
+          <section
+            v-for="sub in section.subsections"
+            :key="sub.id"
+            :id="`section-${sub.id}`"
+            class="content-section subsection"
+          >
+            <h3 class="subsection-title">{{ sub.title }}</h3>
+            <div
+              class="section-content"
+              v-html="sanitizeHTML(sub.content)"
+            ></div>
+          </section>
+        </section>
+
+        <!-- Flat section (backward compatible) -->
+        <section
+          v-else
+          :id="`section-${section.id}`"
+          class="content-section"
+        >
+          <h2 class="section-title">{{ section.title }}</h2>
+          <div
+            class="section-content"
+            v-html="sanitizeHTML(section.content)"
+          ></div>
+        </section>
+      </template>
     </div>
   </main>
 </template>
@@ -105,6 +128,24 @@ defineExpose({
   transition: all 0.3s ease;
 }
 
+.parent-section {
+  border-bottom: 4px solid #764ba2;
+  background-color: #f5f4fb;
+}
+
+.subsection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #c5cae9;
+  background-color: #ffffff;
+  border-left: 3px solid #667eea;
+  border-radius: 4px;
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
 .content-section.highlight {
   background-color: #fff9e6;
   border-left-color: #764ba2;
@@ -117,6 +158,15 @@ defineExpose({
   color: #333;
   border-bottom: 2px solid #667eea;
   padding-bottom: 10px;
+}
+
+.subsection-title {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #444;
+  border-bottom: 1px solid #c5cae9;
+  padding-bottom: 8px;
+  font-weight: 600;
 }
 
 .section-content {

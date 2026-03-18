@@ -2,12 +2,34 @@
   {
     "id": 1,
     "title": "Getting Started",
-    "content": "<p>Welcome to My PHP application!</p><p>This application demonstrates a modern web interface built with <b>Vue 3</b> and <b>Bun</b>.</p><p>Features include:</p><ul><li>Fixed header with search functionality</li><li>Adjustable sidebar navigation</li><li>Scrollable content with HTML support</li></ul>"
+    "subsections": [
+      {
+        "id": "1.1",
+        "title": "Introduction",
+        "content": "<p>Welcome to My PHP application!</p><p>This application demonstrates a modern web interface built with <b>Vue 3</b> and <b>Bun</b>.</p><p>Use the sidebar on the left to navigate between sections, and the search bar at the top to filter content instantly.</p>"
+      },
+      {
+        "id": "1.2",
+        "title": "Installation",
+        "content": "<p>To get up and running quickly:</p><ol><li>Ensure <strong>Bun</strong> is installed on your system (<code>curl -fsSL https://bun.sh/install | bash</code>)</li><li>Clone the repository and run <code>bun install</code> to install dependencies</li><li>Start the development server with <code>bun run dev</code></li><li>Open your browser at <code>http://localhost:5173</code></li></ol><p>For production, build with <code>bun run build</code> and serve the <code>dist/</code> folder.</p>"
+      }
+    ]
   },
   {
     "id": 2,
     "title": "Features & Capabilities",
-    "content": "<h3>Core Features</h3><p>The application includes several <b>powerful features</b>:<ul><li><strong>Real-time Search: </strong> Filter content instantly as you type</li><li><strong>Responsive Design: </strong> Works seamlessly on desktop and tablet</li> <li><strong>HTML Support: </strong> Display rich formatted content with HTML markup</li> <li><strong>Smooth Navigation: </strong> Navigate between sections with smooth scrolling</li> <li><strong>Adjustable Sidebar:</strong> Resize the navigation panel to your preference</li></ul></p>"
+    "subsections": [
+      {
+        "id": "2.1",
+        "title": "Core Features",
+        "content": "<p>The application includes several <b>powerful features</b>:</p><ul><li><strong>Real-time Search:</strong> Filter content instantly as you type</li><li><strong>Responsive Design:</strong> Works seamlessly on desktop and tablet</li><li><strong>HTML Support:</strong> Display rich formatted content with HTML markup</li><li><strong>Smooth Navigation:</strong> Navigate between sections with smooth scrolling</li><li><strong>Adjustable Sidebar:</strong> Resize the navigation panel to your preference</li></ul>"
+      },
+      {
+        "id": "2.2",
+        "title": "Search & Navigation",
+        "content": "<p>The search and navigation system is designed for speed and usability:</p><ul><li>Search filters across <em>all section titles and content</em>, including nested subsections</li><li>Clicking a sidebar item smoothly scrolls to the relevant content and briefly highlights it</li><li>Hierarchical sections can be expanded or collapsed in the sidebar using the toggle indicator</li><li>The sidebar width is draggable — grab the right edge to resize it to your liking</li></ul>"
+      }
+    ]
   },
   {
     "id": 3,
@@ -22,7 +44,7 @@
   {
     "id": 5,
     "title": "Usage Instructions",
-    "content": "<p>Here are the key interactions:</p><ol><li><strong>Search:</strong> Type in the search field at the top to filter content</li><li><strong>Navigate:</strong> Click on any item in the sidebar to scroll to that section</li><li><strong>Resize:</strong> Drag the right edge of the sidebar to adjust its width</li><li><strong>Read:</strong> Enjoy rich HTML-formatted content in the main panel</li></ol><p>The content is loaded from an <code>external JSON file</code>, making it easy to update and maintain.</p>"
+    "content": "<p>Here are the key interactions:</p><ol><li><strong>Search:</strong> Type in the search field at the top to filter content</li><li><strong>Navigate:</strong> Click on any item in the sidebar to scroll to that section or subsection</li><li><strong>Resize:</strong> Drag the right edge of the sidebar to adjust its width</li><li><strong>Read:</strong> Enjoy rich HTML-formatted content in the main panel</li></ol><p>The content is loaded from an <code>external JSON file</code>, making it easy to update and maintain.</p>"
   },
   {
     "id": 6,

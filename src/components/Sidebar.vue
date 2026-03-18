@@ -11,14 +11,41 @@
           :key="section.id"
           class="nav-item"
         >
-          <a 
-            :href="`#section-${section.id}`"
-            class="nav-link"
-            @click.prevent="navigateToSection(section.id)"
-          >
-            <span class="nav-bullet">▸</span>
-            {{ section.title }}
-          </a>
+          <!-- Section with subsections: show parent label + always-visible subsection list -->
+          <template v-if="section.subsections && section.subsections.length">
+            <span class="nav-link nav-parent">
+              <span class="nav-bullet">▸</span>
+              {{ section.title }}
+            </span>
+            <ul class="nav-sublist">
+              <li
+                v-for="sub in section.subsections"
+                :key="sub.id"
+                class="nav-subitem"
+              >
+                <a
+                  :href="`#section-${sub.id}`"
+                  class="nav-link nav-sublink"
+                  @click.prevent="navigateToSection(sub.id)"
+                >
+                  <span class="nav-bullet">▸</span>
+                  {{ sub.title }}
+                </a>
+              </li>
+            </ul>
+          </template>
+
+          <!-- Flat section (backward compatible): show direct nav link -->
+          <template v-else>
+            <a 
+              :href="`#section-${section.id}`"
+              class="nav-link"
+              @click.prevent="navigateToSection(section.id)"
+            >
+              <span class="nav-bullet">▸</span>
+              {{ section.title }}
+            </a>
+          </template>
         </li>
       </ul>
     </nav>
@@ -28,7 +55,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from 'vue'
+import { ref } from 'vue'
 
 const props = defineProps({
   sections: {
@@ -116,18 +143,19 @@ const stopResize = () => {
 .nav-link {
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: 10px 15px;
   color: #333;
   text-decoration: none;
   border-left: 3px solid transparent;
   transition: all 0.2s ease;
   font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-link:hover {
   background-color: #e8eaf6;
   border-left-color: #667eea;
-  padding-left: 20px;
 }
 
 .nav-link:active {
@@ -135,10 +163,41 @@ const stopResize = () => {
   border-left-color: #764ba2;
 }
 
+.nav-parent {
+  font-weight: 600;
+  color: #555;
+  cursor: default;
+}
+
 .nav-bullet {
   margin-right: 8px;
   font-size: 12px;
   color: #667eea;
+}
+
+.nav-sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid #e0e0e0;
+  margin-left: 20px;
+}
+
+.nav-subitem {
+  margin: 0;
+}
+
+.nav-sublink {
+  padding: 8px 15px;
+  font-size: 13px;
+  color: #555;
+  font-weight: 400;
+}
+
+.nav-sublink:hover {
+  background-color: #e8eaf6;
+  border-left-color: #667eea;
+  color: #333;
 }
 
 .sidebar-resizer {

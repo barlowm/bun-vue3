@@ -1,32 +1,54 @@
 [
   {
     "id": 1,
-    "title": "Daily Info",
-    "content": "<p>Welcome to My PHP application!</p><p>This application demonstrates a modern web interface built with <b>Vue 3</b> and <b>Bun</b>.</p><p>Features include:</p><ul><li>Fixed header with search functionality</li><li>Adjustable sidebar navigation</li><li>Scrollable content with HTML support</li></ul>"
+    "title": "Getting Started",
+    "subsections": [
+      {
+        "id": "1.1",
+        "title": "Introduction",
+        "content": "<p>Welcome to My PHP application!</p><p>This application demonstrates a modern web interface built with <b>Vue 3</b> and <b>Bun</b>.</p><p>Use the sidebar on the left to navigate between sections, and the search bar at the top to filter content instantly.</p>"
+      },
+      {
+        "id": "1.2",
+        "title": "Installation",
+        "content": "<p>To get up and running quickly:</p><ol><li>Ensure <strong>Bun</strong> is installed on your system (<code>curl -fsSL https://bun.sh/install | bash</code>)</li><li>Clone the repository and run <code>bun install</code> to install dependencies</li><li>Start the development server with <code>bun run dev</code></li><li>Open your browser at <code>http://localhost:5173</code></li></ol><p>For production, build with <code>bun run build</code> and serve the <code>dist/</code> folder.</p>"
+      }
+    ]
   },
-
   {
     "id": 2,
-    "title": "Daily Info",
-    "content": "<ul><li><a href='https://docs.google.com/spreadsheets/d/1JepTNJDbeBJk_x2ddVQB-vMvoNRs318PBkmCDFXouxE' target='SantasCalendar'>Santa's Calendar</a>; <a href='https://docs.google.com/spreadsheets/d/1Ak8bPCN406b2wIbChpQ1oxcAfvBaeAeLt32nx1V_0UQ' target='SantasCalendar1'>Santa's Calendar 2025</a></li><li><a href='https://www.greenfieldlancaster.com/event-calendar/' target='GreenfieldCalendar'>Greenfield Event Calendar</a></li><li><a href='https://docs.google.com/spreadsheets/d/1ETn1ds7gyzYtl-Qpqza-O8vl2NUYPF2WN-or7_BC710/edit#gid=1525698383' target='YTD Expensis'>Expensis YTD - Nov 13 2023</a></li></ul>"},
+    "title": "Features & Capabilities",
+    "subsections": [
+      {
+        "id": "2.1",
+        "title": "Core Features",
+        "content": "<p>The application includes several <b>powerful features</b>:</p><ul><li><strong>Real-time Search:</strong> Filter content instantly as you type</li><li><strong>Responsive Design:</strong> Works seamlessly on desktop and tablet</li><li><strong>HTML Support:</strong> Display rich formatted content with HTML markup</li><li><strong>Smooth Navigation:</strong> Navigate between sections with smooth scrolling</li><li><strong>Adjustable Sidebar:</strong> Resize the navigation panel to your preference</li></ul>"
+      },
+      {
+        "id": "2.2",
+        "title": "Search & Navigation",
+        "content": "<p>The search and navigation system is designed for speed and usability:</p><ul><li>Search filters across <em>all section titles and content</em>, including nested subsections</li><li>Clicking a sidebar item smoothly scrolls to the relevant content and briefly highlights it</li><li>Hierarchical sections can be expanded or collapsed in the sidebar using the toggle indicator</li><li>The sidebar width is draggable — grab the right edge to resize it to your liking</li></ul>"
+      }
+    ]
+  },
   {
     "id": 3,
+    "title": "Vue 3 Integration",
+    "content": "<p>This project leverages the power of <em>Vue 3</em> with its Composition API.</p><p><code>Vue 3</code> provides:</p><ul><li>Better performance and smaller bundle sizes</li><li>Improved type support for TypeScript</li><li>More flexible component composition patterns</li><li>Enhanced reactivity system</li></ul><blockquote>Vue 3 makes building interactive user interfaces simpler and more enjoyable.</blockquote>"
+  },
+  {
+    "id": 4,
     "title": "Technical Architecture",
     "content": "<p>The application architecture is built with modern web technologies:</p><pre><code>Frontend Stack:\n  - Vue 3 (Composition API)\n  - Vite (Build tool)\n  - CSS3 (Styling)\n  - JavaScript ES6+</code></pre><p>The sidebar width is <b>adjustable</b> by dragging the resize handle on the right edge.</p><p>Search functionality works across both section titles and content, providing instant filtering.</p>"
   },
   {
-    "id": 4,
-    "title": "Usage Instructions",
-    "content": "<p>Here are the key interactions:</p><ol><li><strong>Search:</strong> Type in the search field at the top to filter content</li><li><strong>Navigate:</strong> Click on any item in the sidebar to scroll to that section</li><li><strong>Resize:</strong> Drag the right edge of the sidebar to adjust its width</li><li><strong>Read:</strong> Enjoy rich HTML-formatted content in the main panel</li></ol><p>The content is loaded from an <code>external JSON file</code>, making it easy to update and maintain.</p>"
-  },
-  {
     "id": 5,
-    "title": "Styling & Customization",
-    "content": "<p>The application features a <b>modern design</b> with:</p><ul><li>Gradient header with purple theme</li><li>Smooth transitions and hover effects</li><li>Custom scrollbar styling</li><li>Responsive typography</li><li>Accessible color contrast ratios</li></ul><p>All styles are <em>scoped to components</em>, preventing CSS conflicts.</p><p>You can customize colors, fonts, and spacing by modifying the component styles.</p>"
+    "title": "Usage Instructions",
+    "content": "<p>Here are the key interactions:</p><ol><li><strong>Search:</strong> Type in the search field at the top to filter content</li><li><strong>Navigate:</strong> Click on any item in the sidebar to scroll to that section or subsection</li><li><strong>Resize:</strong> Drag the right edge of the sidebar to adjust its width</li><li><strong>Read:</strong> Enjoy rich HTML-formatted content in the main panel</li></ol><p>The content is loaded from an <code>external JSON file</code>, making it easy to update and maintain.</p>"
   },
   {
     "id": 6,
-    "title": "Misc Password Stuff",
-    "content": "<p>Use \"Epubor Ultimate\" to convert  Kindle books to ePub. Even the new KFX books</p><p></p><p><strong>Nook Password</strong> - $$3rtr0F</p><p><strong>Nook Debugging</strong> - NOOK-BNRV1300 (from a <a href=\"https://www.mobileread.com/forums/showpost.php?p=4430836&postcount=10\" target=\"MobileReadPost\">post</a></p><p>For those that are looking for the password is \"NOOK-BNRV1300\" without the quotes, alternative for the glowlight 4 is \"NOOK-BNRV1100\" and for the glowlight 4E is \"NOOK-BNRV1000\"</p><p></p><p>System Mechanic Ultimate Defense Activation Key: PHXADJBQGYDKNB6F94MB</p><p>Master Password: C1@rk-K3nt-$$3rtrF</p><p>ByePass Account Recovery Key: A214-WXHZ-X5LY-0GE8-ZJH0-K2OF</p><p>ByePass Account Recovery Key: A214WXHZX5LY0GE8ZJH0K2OF</p><p>ByePass Account Email: barlowm@gmail.com</p><p></p><p>z-lib password: 0iS{2B4g`q'D031c (barlowm email, nic=SilverWolfBibliofile)</p><p>Discord Password: </p><p>kaiser permanente Password: 0b1CaHCUhGJPDMvCMR0c</p><p></p><p>eTrade - https://us.etrade.com/etx/pxy/login - mwbinjersy / $$3rtr0F ($44 investments)</p><p>Apple Login - barlowm@gmail.com; $$3rtr0F</p><p>First Pet: Honey</p><p>Nickname: Mickey</p><p>First Beach: Keansburg</p><p></p><p>https://www.etsy.com/your/purchases?ref=hdr_user_menu-txs</p><p>https://host.godaddy.com/webhosting/cpanel/account/c08e8f04-4624-4047-8215-8092d7e00c13/view?hosting=true</p><p><ul>    <li><a href=\"iolo.com\" target=\"SystemMech\">System Mechanic Ultimate Defense</a> - Registration Key: PHXADJBQGYDKNB6F94MB; Available for 10 computers; Account Start: 1 June 2025; License available till 1 June 2029</li>    <li><a href=\"https://www.secure.mytdfinancing.com/?product=RAYMOUR\"        OLDhref=\"https://www.secure.mytdfinancing.com/app/accountSummary\" target=\"Raymour\" credentials=\"mwbarlow/KcC6emCzaJ5X9HZ\">Raymour & Flanigan Bill - 1 June 2025 - $199.00 Due</a></li>    <li><a href=\"https://d.comenity.net/ac/michaels/public/home\" target=\"Michaels\" credentials=\"barlowm/w&ZVfeK5/VW8Dv*\">Michael's - $50.00 Due by 11th of month</a></li><li><a href=\"https://www.pcmag.com/reviews/synology-diskstation-ds1522-plus\" target=\"NAS\">Synology</a> 5 Bay NAS - $700.00</li>    <li><a href=\"https://www.shade.inc/\" target=\"_Blank\" title=\"Local AI Powered App for sorting and file exploring\">Shade</a>         <a href=\"https://shade.mintlify.app/introduction\" target=\"_Blank\" title=\"Local AI Powered App for sorting and file exploring\">Shade Introduction</a>         <a href=\"https://shade.mintlify.app/getting-started\" target=\"_Blank\" title=\"Local AI Powered App for sorting and file exploring\">Shade Getting Started</a>    </li>    <li><a href=\"https://www.kohls.com/myaccount/mycard/manage.jsp\" target=\"Kohls\">Manage Kohl's Account</a></li>    <li><a href=\"https://d.comenity.net/ac/torrid/public/home\" target=\"Torrid\" name=\"JBARLOW123\" pswd=\"Fraggle03\">Torrid</a></li>    <li><a href=\"https://www.synchrony.com/accounts/?client=tjx\" target=\"TJX\" name=\"barlowm@gmail.com\" pswd=\"aspr5137\">TJX/Home Goods</a> $250 limit</li>    <li><b>Wednesday, October 09 @2:00 pm (Arrive by 1:45 PM)</b>        <a href=\"https://keystoneurology.com/\" target=\"DrVisit\">KEYSTONE UROLOGY SPECIALISTS</a> - <br>        Calhoon, Brent, PA  2106 Harrisburg Pike Suite 200 Lancaster, PA 17604-3200 <- ED Specialist.<br>        <a href=\"https://customscripts.us/\" target=\"ED Med Pharmacy\">Custom Prescriptions of Lancaster</a>        Phone: 717-393-0518<br>        Address: 902 N. Duke Street, Lancaster, PA 17602<br>        <a href=\"\" target=\"ED Med Pharmacy\">Pharmacy Innovations</a> (now filling scripts for custom scripts) - Phone: 814 838 2102<br>        Rx: 00282502 - 3Ml Triple Mix 30MG-1MG-10MCG/ML Injectable<br>        Payment $151.00 made on 28 Dec 2024    </li>    <li><b>Friday October 18 @ 1:50 PM (Arrive by 1:35 PM)</b>         <a href=\"https://upmccentralpaportal.com/mychart/Authentication/Login?\" target=\"Highlands Family Practice\">Highlands Family Practice</a>        Office Visit with Megan Morris Murphy    </li></ul>"
+    "title": "Styling & Customization",
+    "content": "<p>The application features a <b>modern design</b> with:</p><ul><li>Gradient header with purple theme</li><li>Smooth transitions and hover effects</li><li>Custom scrollbar styling</li><li>Responsive typography</li><li>Accessible color contrast ratios</li></ul><p>All styles are <em>scoped to components</em>, preventing CSS conflicts.</p><p>You can customize colors, fonts, and spacing by modifying the component styles.</p>"
   }
 ]
