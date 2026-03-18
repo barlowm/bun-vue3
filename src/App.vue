@@ -30,10 +30,22 @@ const filteredSections = computed(() => {
   }
   
   const query = searchQuery.value.toLowerCase()
-  return sections.value.filter(section => 
-    section.title.toLowerCase().includes(query) ||
-    section.content.toLowerCase().includes(query)
-  )
+  return sections.value.filter(section => {
+    if (section.subsections && section.subsections.length) {
+      return (
+        section.title.toLowerCase().includes(query) ||
+        section.subsections.some(
+          sub =>
+            sub.title.toLowerCase().includes(query) ||
+            (sub.content && sub.content.toLowerCase().includes(query))
+        )
+      )
+    }
+    return (
+      section.title.toLowerCase().includes(query) ||
+      (section.content && section.content.toLowerCase().includes(query))
+    )
+  })
 })
 
 const handleSearch = (query) => {
