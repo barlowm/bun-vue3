@@ -50,6 +50,31 @@ Which automatically opens a webpage: [http://localhost:4173/](http://localhost:4
 
 So after testing I decided to try it as my new home page everytime I started my PC using [PM2](https://pm2.keymetrics.io/) Advanced Production Process Manager for Node.js
 
+For "Production", PM2 should be run using a Configuration File
+
+```
+// pm2.config.js
+export default {
+  apps: [
+    {
+      name: 'bun-app',
+      script: 'index.ts', // the path to your application's entry point
+      interpreter: 'bun', // explicitly set bun as the runtime
+      cwd: process.cwd(), // essential for ES modules and relative paths
+      autorestart: true,
+      instances: 1,
+      exec_mode: 'fork', // PM2 cluster mode is not supported with Bun
+      env: {
+        PATH: `${process.env.HOME}/.bun/bin:${process.env.PATH}` // ensure bun is in PATH for PM2
+      }
+    }
+  ]
+};
+```
+And started (from the applications folder) with
+```
+pm2 start pm2.config.js
+```
 _________________
 
 
